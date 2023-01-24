@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png" />
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js" ></script>
+    <script defer src="script.js"></script>
+    
+    <title>WayFarer - reserve your flight!</title>
+</head>
+<body>
+    <header class="header">
+        <nav class = "main-nav"> 
+            <ul class="main-nav-list">
+                <li> <a href ="#" class="main-nav-link">Home</a></li>
+                <li> <a href ="#deals" class="main-nav-link special-link">Deals</a></li>
+                <li> <a href ="#travel-destinations" class="main-nav-link">Destinations</a></li>
+                <li> <a href ="#" class="main-nav-link"> <img class="logo" alt="Wayfarer" src="img/logo.png"/></a></li>
+                <li> <a href ="about_us.html" class="main-nav-link">About us</a></li>
+                <li> <a href ="#" class="main-nav-link">Sign up</a></li>
+                <li> <a href ="#" class="main-nav-link nav-cta">Cart<span class="cart-number">1</span></a></li>
+            </ul>
+        </nav>
+     </header>
+    <section class="hero-section"> 
+        <div 
+                class="hero-img-box"
+                role=img
+                aria-label="Airport"
+        ></div>
+        <div class="hero-main-box"> 
+             <h2 class="secondary-heading">With us everything is at your fingertips!</h2>
+             <!--- <p><ion-icon name="arrow-down-outline"></ion-icon></p> -->
+            <!---- <p> over 500,000 offerts</p> -->
+            <form action="#" class="hero-form">
+                <fieldset class="hero-form-frame">
+                    <legend class="hero-form-legend">Find your dream flight</legend>
+                    <div class="hero-form-box">
+                        <div class="hero-box-feature">
+                            <i class="ph-airplane-takeoff icon-hero"></i>
+                            <label for="departure-airport">From</label>
+                            <select id="departure-airport" name="dep-flights">
+                                <option value="Warsaw" selected>Warsaw</option>
+                                <option value="Paris">Paris</option>
+                                <option value="Berlin">Berlin</option>
+                            </select>
+                        </div>
+                        <div class="hero-box-feature">
+                            <i class="ph-airplane-landing icon-hero"></i>
+                            <label for="arrival-airport">To</label>
+                            <select id="arrival-airport" name="arr-flights">
+                                <option value="Rome" selected>Rome</option>
+                                <option value="London">London</option>
+                                <option value="Norway">Norway</option>
+                            </select>
+                        </div>
+                        <div class="hero-box-feature">
+                            <i class="ph-calendar icon-hero"></i>
+                            <label for="start">Departure</label>
+                            <input type="date" id="start" name="trip-start" value="2022-12-27" min="2022-12-27" max="2023-05-31"> 
+                        </div>
+                        <div class="hero-box-feature">
+                            <i class="ph-calendar icon-hero"></i>
+                            <label for="finish">Return</label>
+                            <input type="date" id="finish" name="trip-finish" value="2023-01-03" min="2022-12-27" max="2023-05-31">
+                        </div>
+                        <div class="hero-box-feature-2">
+                            <h4 class="heading-feature">Class:</h4>
+                            <input type="radio" id="economy" name="class" value="ECONOMY" checked >
+                            <label for="economy">Economy</label><br>
+                            <input type="radio" id="premium-economy" name="class" value="ECONOMY-PREMIUM">
+                            <label for="premium-economy">Premium Economy</label><br>
+                            <input type="radio" id="business" name="class" value="BUSINESS">
+                            <label for="business">Business</label><br>
+                        </div>
+                        <div class="hero-box-feature-2 passenger-area">
+                            <h4 class="heading-feature">Passengers:</h4>
+                            <div class="passenger-basic">
+                            <i class="ph-user icon-hero"></i>
+                            <label for="people"> </label>
+                            <input type="text" id="people" name="people" placeholder="1 Passenger, adult..." readonly>
+                            </div>
+                            <div class="passenger-extra hidden">
+                                <h3 class="heading-pass-extra">Add passengers</h3>
+                                <p class="text-pass-extra">Check the passengers'age on the day of departure</p>
+                                <div class="type-passenger-box">
+                                    <div class="pass-age">
+                                        <p class="pass-age-main">Adults</p>
+                                        <p class="pass-age-detail">16+ years</p>
+                                    </div>
+                                    <div class="pass-number">
+                                        <button class="btn-minus"><i class="ph-minus"></i></button>
+                                        <p class="pass-number-number">1</p>
+                                        <button class="btn-plus"><i class="ph-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div class="type-passenger-box">
+                                    <div class="pass-age">
+                                        <p class="pass-age-main">Teenagers</p>
+                                        <p class="pass-age-detail">12-15 years</p>
+                                    </div>
+                                    <div class="pass-number">
+                                        <button class="btn-minus"><i class="ph-minus"></i></button>
+                                        <p class="pass-number-number">0</p>
+                                        <button class="btn-plus"><i class="ph-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div class="type-passenger-box">
+                                    <div class="pass-age">
+                                        <p class="pass-age-main">Children</p>
+                                        <p class="pass-age-detail">2-11 years</p>
+                                    </div>
+                                    <div class="pass-number">
+                                        <button class="btn-minus"><i class="ph-minus"></i></button>
+                                        <p class="pass-number-number">0</p>
+                                        <button class="btn-plus"><i class="ph-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div class="type-passenger-box">
+                                    <div class="pass-age">
+                                        <p class="pass-age-main">Infants</p>
+                                        <p class="pass-age-detail">0-24 months</p>
+                                    </div>
+                                    <div class="pass-number">
+                                        <button class="btn-minus"><i class="ph-minus"></i></button>
+                                        <p class="pass-number-number">0</p>
+                                        <button class="btn-plus"><i class="ph-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div class="btn-confirm-box"><button class="btn-confirm">Confirm</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="search">Search &rarr;</a>
+                </fieldset>
+            </form>
+
+        </div>
+
+    </section>
+    <section class="offers-section container" id="deals">
+        <div class="offers-teaser">
+            <h2 class="heading-secondary-offers"><span>3</span> special offers every 3 days</h2>
+            <h3 class="heading-tertiary-offers">Do not miss a chance, soon they will disappear!</h3>
+            <table id="countdown">
+                <tr id="countdown-timer">
+                    <td><span id="days">x</span></td>
+                    <td> :</td>
+                    <td><span id="hours">x</span></td>
+                    <td><span > :</span></td>
+                    <td><span id="minutes">x</span></td>
+                    <td><span >:</span></td>
+                    <td><span id="seconds">x</span></td>
+                </tr>
+                <tr id="countdown-labels">
+                    <td><span>Days</span></td>
+                    <td><span ></span></td>
+                    <td><span>Hours</span></td>
+                    <td><span ></span></td>
+                    <td><span>Minutes</span></td>
+                    <td><span ></span></td>
+                    <td><span>Seconds</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="offers">
+            <div class="offer offer-first">
+                <img class="img-offer" alt="LAX" src="img/LAX.jpg">
+                <div class="offer-description">
+                    <div class="offers-text">
+                        <h3 class="heading-features-offers-1">Hamburg - LA</h3>
+                        <h4 class="heading-features-offers-2">HAM-LAX</h4>
+                        <p><span class="price">749$</span></p>
+                     </div>
+                     <div class="offers-feature">
+                        <ion-icon name="calendar-outline" class="icon-offers"></ion-icon> <span>SAT, 14 JAN</span>
+                        <ion-icon name="airplane-outline" class="icon-offers"></ion-icon> <span>1 change</span>
+                        <ion-icon name="hourglass-outline" class="icon-offers"></ion-icon><span>15h 15min</span>
+                     </div>
+                     <div class="btn-offers-box"><a href="#" class="btn-offers">BUY</a></div>
+                </div>
+            </div>
+            <div class="offer offer-second">
+                <img class="img-offer" alt="NCE" src="img/NCE.jpg">
+                <div class="offer-description">
+                    <div class="offers-text">
+                        <h3 class="heading-features-offers-1">Amsterdam - Sain-Tropez</h3>
+                        <h4 class="heading-features-offers-2">AMS-NCE</h4>
+                        <p><span class="price">99$</span></p>
+                     </div>
+                     <div class="offers-feature">
+                         <ion-icon name="calendar-outline" class="icon-offers"></ion-icon> <span>SUN, 8 APR</span>
+                         <ion-icon name="airplane-outline" class="icon-offers"></ion-icon> <span>1 change</span>
+                         <ion-icon name="hourglass-outline" class="icon-offers"></ion-icon><span>5h</span>
+                     </div>    
+                     <div class="btn-offers-box"><a href="#" class="btn-offers">BUY</a></div>
+                </div>
+            </div>
+            <div class="offer offer-third">
+                <img class="img-offer" alt="BER" src="img/BER.jpg">
+                <div class="offer-description">
+                    <div class="offers-text">
+                        <h3 class="heading-features-offers-1">London - Berlin</h3>
+                        <h4 class="heading-features-offers-2">STN-BER</h4>
+                        <p><span class="price">29$</span></p>
+                     </div>
+                     <div class="offers-feature">
+                        <ion-icon name="calendar-outline" class="icon-offers"></ion-icon><span>WED, 25 JAN</span>
+                        <ion-icon name="airplane-outline" class="icon-offers"></ion-icon> <span>direct</span>
+                        <ion-icon name="hourglass-outline" class="icon-offers"></ion-icon><span>1h 45min</span>
+                     </div>
+                     <div class="btn-offers-box"><a href="#" class="btn-offers">BUY</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-featured-in">
+        <h2>As featured in</h2>
+        <div class="logos">
+            <img src="img/conduit.png" alt="conduit" class="logo-featured">
+            <img src="img/amazon.jpg" alt="amazon" class="logo-featured">
+            <img src="img/NG.png" alt="NationalGeographic" class="logo-featured">
+            <img src="img/forbes.png" alt="forbes" class="logo-featured">
+            <img src="img/booking.png" alt="booking" class="logo-featured">
+        </div>
+        
+    </section>
+    <section class="destinations" id="travel-destinations">
+        <div class="destinations-container">
+            <div class="emoticons-1">
+                <ion-icon name="airplane-outline" class="icon-destination icon-type1"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type2"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type3"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type4"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type5"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type6"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type7"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type8"></ion-icon>
+        
+            </div>
+            <div class="flights-schedule-box">
+                <div class="flights-schedule">
+                    <table class="flights-table">
+                       <!-- <thead>
+                          <tr>
+                            <th>Departure</th>
+                            <th></th>
+                            <th>Arrival</th>
+                            <th>From</th>
+                            <th></th>
+                          </tr>
+                          -->
+                        <tbody>
+                            <tr>
+                                <td><span>Departure</span></td>
+                                <td></td>
+                                <td><span>Arrival</span></td>
+                                <td><span>From</span></td>
+                                <td></td>
+                              </tr>
+                          <tr>
+                            <td>Edinburgh</td>
+                            <td>&rarr;</td>
+                            <td>Milan</td>
+                            <td>30$</td>
+                            <td><a href="#" class="link-check">Check out</a></td>
+                          </tr>
+                          <tr>
+                            <td>Dublin</td>
+                            <td>&rarr;</td>
+                            <td>Tallinn</td>
+                            <td>120$</td>
+                            <td><a href="#" class="link-check">Check out</a></td>
+                          </tr>
+                          <tr>
+                            <td>Athens</td>
+                            <td>&rarr;</td>
+                            <td>Glasgow</td>
+                            <td>55$</td>
+                            <td><a href="#" class="link-check">Check out</a></td>
+                          </tr>
+                          <tr>
+                            <td>Toronto</td>
+                            <td>&rarr;</td>
+                            <td>Buenos Aires</td>
+                            <td>970$</td>
+                            <td><a href="#" class="link-check">Check out</a></td>
+                          </tr>
+                          <tr>
+                            <td>Istanbul</td>
+                            <td>&rarr;</td>
+                            <td>Catania</td>
+                            <td>112$</td>
+                            <td><a href="#" class="link-check">Check out</a></td>
+                          </tr>
+                          <tr>
+                            <td>Jakarta</td>
+                            <td>&rarr;</td>
+                            <td>Venice</td>
+                            <td>460$</td>
+                            <td><a href="#" class="link-check">Check out</a></td>
+                          </tr>
+                          <tr>
+                            <td>Tel Aviv</td>
+                            <td>&rarr;</td>
+                            <td>London</td>
+                            <td>72$</td>
+                            <td><a href="#" class="link-check">Check out</a></td>
+                          </tr>
+                          <tr>
+                            <td>Manchester</td>
+                            <td>&rarr;</td>
+                            <td>Reykjavik</td>
+                            <td>80$</td>
+                            <td><a href="#" class="link-check">Check out</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <p><a href="#" class="link-more">See more</a></p>
+                </div>
+            </div>
+            <div class="emoticons-2">
+                <ion-icon name="airplane-outline" class="icon-destination icon-type1"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type2"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type3"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type4"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type5"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type6"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type7"></ion-icon>
+                <ion-icon name="airplane-outline" class="icon-destination icon-type8"></ion-icon>
+            </div>
+        </div>
+    </section>
+    <section class="features-section container-features">
+        <div class="heading-features-section">
+            <h3 class="heading-tertiary-features">Wayfarer is your gate, it is you who have a key.<br>Open it to experience different dimension of travelling!</h3>
+            <div class="waviy">
+                <span style="--i:1">W</span>
+                <span style="--i:2">A</span>
+                <span style="--i:3">Y</span>
+                <span style="--i:4">F</span>
+                <span style="--i:5">A</span>
+                <span style="--i:6">R</span>
+                <span style="--i:7">E</span>
+                <span style="--i:8">R</span>
+                <span style="--i:9">.</span>
+           </div>
+           <h3 class="heading-tertiary-features-2">We make travel bookings simple and accessible to everyone!</h3>
+           <h3 class="heading-tertiary-features-2"><span>Passion</span>&#183;<span>devotion</span>&#183;<span>experience</span></h3>
+        </div>
+        <div class="features-properties-box">
+            <div class="property">
+                <div class="icon-box-features">
+                    <ion-icon name="ribbon-outline" class="icon-feature icon-front"></ion-icon>
+                    <ion-icon name="ribbon" class="icon-feature icon-back"></ion-icon>
+                 </div>
+                 <div>
+                     <p class="feature-text-icon-main">Best price guarantee</p>
+                     <p class="feature-text-icon-small">Lorem ipsum dolor sit, amet consectetur adipisicing esse perspiciatis totam </p>
+                 </div>
+            </div>
+            <div class="property">
+                <div class="icon-box-features">
+                    <ion-icon name="pricetags-outline" class="icon-feature icon-front"></ion-icon>
+                    <ion-icon name="pricetags" class="icon-feature icon-back"></ion-icon>
+                 </div>
+                 <div>
+                     <p class="feature-text-icon-main">No hidden charges</p>
+                     <p class="feature-text-icon-small">Saepe vero dolor commodi fugit? Atque fugit, porro ratione magni earum </p>
+                 </div>
+            </div>
+            <div class="property">
+                <div class="icon-box-features">
+                    <ion-icon name="diamond-outline" class="icon-feature icon-front"></ion-icon>
+                    <ion-icon name="diamond" class="icon-feature icon-back"></ion-icon>
+                 </div>
+                 <div>
+                     <p class="feature-text-icon-main">High quality services</p>
+                     <p class="feature-text-icon-small">Optio accusantium explicabo quod. Mollitia, asperiores. Quis!</p>
+                 </div>
+            </div>
+            <div class="property">
+                <div class="icon-box-features">
+                    <ion-icon name="body-outline"  class="icon-feature icon-front"></ion-icon>
+                    <ion-icon name="body" class="icon-feature icon-back"></ion-icon>
+                 </div>
+                 <div>
+                     <p class="feature-text-icon-main">Wide range of travels</p>
+                     <p class="feature-text-icon-small"> Repudiandae sit ipsam et amet, in iste pariatur optio quod</p>
+                 </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="gallery-form">
+        <div class="gallery">
+        <figure class="gallery-item">
+            <img  alt="" src="img/gallery-1.jpg">
+        </figure>
+        <figure class="gallery-item">
+            <img  alt="" src="img/gallery-2.jpg">
+        </figure>
+        <figure class="gallery-item">
+            <img alt="" src="img/gallery-3.jpg">
+        </figure>
+        <figure class="gallery-item">
+            <img  alt="" src="img/gallery-4.jpg">
+        </figure>
+        <figure class="gallery-item">
+            <img alt="" src="img/gallery-5.jpg">
+        </figure>
+        <figure class="gallery-item">
+            <img alt="" src="img/gallery-6.jpg">
+        </figure>
+        <figure class="gallery-item">
+            <img  alt="" src="img/gallery-7.jpg">
+        </figure>
+        <figure class="gallery-item">
+            <img alt="" src="img/gallery-8.jpg">
+        </figure>
+        <figure class="gallery-item">
+            <img alt="" src="img/gallery-9.jpg">
+        </figure>
+        </div>
+        <div class="form">
+            <div class="form-gallery-heading">
+            <h3>Don't hesitate!</h3>
+            <h4>Contact us</h4>
+            <p class="par-first">Your opinion is crucial for us</p>
+            <p class="par-second">Lorem ipsum, dolor sit amet consectetur adipisicing <br> elit licabo laudantium, cumque a facilis sit corrupti!</p>
+            </div>
+            <form action="#" class="form-in-gallery">
+                <!--
+                <div class="form-box-stars">
+                <ion-icon name="star-outline" class="star star1 star-empty"></ion-icon> <ion-icon name="star" class="star star-full"></ion-icon>
+                <ion-icon name="star-outline" class="star star2 star-empty"></ion-icon> <ion-icon name="star" class="star star-full"></ion-icon>
+                <ion-icon name="star-outline" class="star star3 star-empty"></ion-icon> <ion-icon name="star" class="star star-full"></ion-icon>
+                <ion-icon name="star-outline" class="star star4 star-empty"></ion-icon> <ion-icon name="star" class="star star-full"></ion-icon>
+                <ion-icon name="star-outline" class="star star5 star-empty"></ion-icon> <ion-icon name="star" class="star star-full"></ion-icon> <br>
+                </div>
+                -->
+                <div class="form-box-gallery">
+                <label for="fname" class="form-text-main">Full name</label><br>
+                <input type="text" id="fname" name="fname" value="Name" class="form-text-fringe"><br>
+
+                <label for="email" class="form-text-main">Email address</label><br>
+                <input type="text" id="email" name="email" value="Email" class="form-text-fringe"><br>
+
+                <label for="subject" class="form-text-main">Subject</label><br>
+                <input type="subject" id="subject" name="subject" value="Subject" class="form-text-fringe"><br>
+               
+                <label for="message" class="form-text-main">Message</label><br>
+                <textarea name="message" id="message "rows="6" cols="30" class="form-text-fringe">Message</textarea><br>
+                </div>
+            </form>
+            <div class="box-btn-form"><a href="#" class="btn-submit">submit</a></div>
+           
+    </section>
+    <footer>
+        <div class="container-part1-footer">
+              <a href="#" class="footer-logo">
+                <img class="logo" alt="Wayfarer" src="img/logo.png" />
+              </a>
+              <address class="contact">
+                <p class="footer-heading">Contact</p>
+                <p class="address">
+                  2908 Patton Lane Garner NC 
+                </p>
+                <br>
+                <p>
+                  <a class="footer-link address-link" href="tel:919-210-5321">919-210-5321</a>
+                  <a class="footer-link address-link" href="mailto:Wayfarer2020@gmail.com"
+                    >Wayfarer2020@gmail.com</a>
+                </p>
+              </address>
+              <nav class="nav-col">
+                <p class="footer-heading">Company</p>
+                <ul class="footer-nav">
+                  <li><a class="footer-link" href="about_us.html">About us</a></li>
+                  <li><a class="footer-link" href="#">Team</a></li>
+                  <li><a class="footer-link" href="#">Career</a></li>
+                </ul>
+              </nav>
+              <nav class="nav-col">
+                <p class="footer-heading">Explore</p>
+                <ul class="footer-nav">
+                  <li><a class="footer-link" href="#">Offerts</a></li>
+                  <li><a class="footer-link" href="#">Destinations</a></li>
+                  <li><a class="footer-link" href="#">Airports</a></li>
+                  <li><a class="footer-link" href="#">Domestic flights</a></li>
+                </ul>
+              </nav>
+              <ul class="social-links">
+                <li>
+                  <a class="footer-link" href="#"
+                    ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+                  ></a>
+                </li>
+                <li>
+                  <a class="footer-link" href="#"
+                    ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+                  ></a>
+                </li>
+                <li>
+                  <a class="footer-link" href="#"
+                    ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+                  ></a>
+                </li>
+              </ul>
+          </div>
+          <hr>
+          <div class="container-part2-footer">
+          <p class="copyright">
+            Copyright &copy; <span class="copyright-year">2023</span> by Wayfarer, Inc. All rights reserved.
+          </p>
+          <div> 
+            <ul class="footer-policy">
+                <li><a class="policy-link" href="#">Privacy policy</a></li>
+                <li><a class="policy-link" href="#">Cookie policy</a></li>
+                <li><a class="policy-link" href="#">Terms of service</a></li>
+                <li><a class="policy-link" href="#">Security</a></li>
+              </ul>
+          </div>
+        </div>    
+           
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body> 
+</html>

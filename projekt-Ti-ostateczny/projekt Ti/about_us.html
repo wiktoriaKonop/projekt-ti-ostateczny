@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WayFarer - About Us</title>
+
+    <link href="style_about_us.css" rel="stylesheet">
+    <link href="style_resp_about_us.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script defer src="script_about_us.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h2 class="h2-header">ABOUT US</h2>
+        <a class="a-header-logo" href="index.html"><img class="img-header-logo" src="img/logo.png"></a>
+    </header>
+
+    <section class="section-informations">
+        <div class="div-about-us">
+            <h3 class="h3-informations">Few information about us</h3>
+            <ul class="ul-informations">
+                <li class="li-informations">On the market since 2020</li>
+                <li class="li-informations">Over 100 experienced pilots</li>
+                <li class="li-informations">Well-qualified staff</li>
+                <li class="li-informations">Over 70 possible flight routes</li>
+            </ul>
+        </div>
+
+        <div class="div-new-ideas">
+            <h3 class="h3-informations">Our future projects</h3>
+            <ul class="ul-informations">
+                <li class="li-informations">Expansion of the fleet to 200 modern machines</li>
+                <li class="li-informations">Flying direct from Europe to USA</li>
+                <li class="li-informations">Start flying from Europe to South America</li>
+                <li class="li-informations">Create fly booking app</li>
+            </ul>
+        </div>
+
+        <div class="div-new-destinations">
+            <h3 class="h3-informations">New destinations</h3>
+            <ul class="ul-informations">
+                <li class="li-informations">São Paulo</li>
+                <li class="li-informations">Rio de Janeiro</li>
+                <li class="li-informations">Chicago</li>
+                <li class="li-informations">Kāthmāndu</li>
+                <li class="li-informations">Bali</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-opinion">
+        <h2 class="h2-opinion">Customer Opinions</h2>
+        <div class="div-opinion  op1">
+            <h3 class="h3-opinion">Michael</h3>
+            <p class="p-opinion">
+                Best travel I have ever had. Kind stuff, without any problems. Best price on the market.
+            </p>
+            <p class="p-opinion-arrow">( use left and right arrow to switch between opinions )</p>
+        </div>
+
+        <div class="div-opinion  op2">
+            <h3 class="h3-opinion">Julia</h3>
+            <p class="p-opinion">
+                That was my first journey with WayFarer, but I am sure, that not last. Best choice for me.
+            </p>
+            <p class="p-opinion-arrow">( use left and right arrow to switch between opinions )</p>
+        </div>
+
+        <div class="div-opinion  op3">
+            <h3 class="h3-opinion">Thiago</h3>
+            <p class="p-opinion">
+                I flew with WayFarer from France to Brazil with a change in the USA. Everything went smoothly, 
+                but I am very happy that soon it will be able to fly directly from Europe.
+            </p>
+            <p class="p-opinion-arrow">( use left and right arrow to switch between opinions )</p>
+        </div>
+
+        <div class="div-opinion  op4">
+            <h3 class="h3-opinion">Monika</h3>
+            <p class="p-opinion">
+                I am glad that there is such a large selection of connections from Poland at a good price
+            </p>
+            <p class="p-opinion-arrow">( use left and right arrow to switch between opinions )</p>
+        </div>
+    </section>
+
+    <section class="section-stuff">
+        <div class="div-stuff">
+            <h2 class="h2-stuff">Our Workers</h2>
+            <img class="img-stuff1" src="about_img/stewardess.jpg">
+            <p class="p-stuff1">
+                We employ flight attendants from all over the world. Each of them undergoes safety and passenger service training. 
+                There is always a person on board who knows English, Spanish and French. They also have knowledge of basic information about the destination country.
+                We guarantee world-class service.
+            </p>
+            <div class="clearer"></div>
+
+            <p class="p-stuff2">
+                Our pilots graduated from the best schools in the world. Every year, 
+                they undergo training to consolidate their skills and allow them to fly modern aircraft. During training, we use the best flight simulators.
+            </p>
+            <img class="img-stuff2" src="about_img/pilot1.jpg">
+        </div>
+    </section>
+
+    <section class="section-FAQ-formular">
+        <div class="div-FAQ">
+            <h2 class="h2-FAQ">FAQ</h2>
+
+            <a class="a-FAQ a-1" onclick="p_appear('p-1')">Where can I find flight number?</a><br>
+            <p class="p-FAQ p-1">You can find your flight number on elektronic ticket, which we send on your email.</p><br>
+
+            <a class="a-FAQ a-2" onclick="p_appear('p-2')">Where can I check status of the flight?</a><br>
+            <p class="p-FAQ p-2">You should write number of your flight on the status of the flight side.</p><br>
+
+            <a class="a-FAQ a-3" onclick="p_appear('p-3')">How much is excess baggage?</a><br>
+            <p class="p-FAQ p-3">The price depends on the route. It is different for everyone.</p><br>
+
+            <a class="a-FAQ a-4" onclick="p_appear('p-4')">How can I return the ticket?</a><br>
+            <p class="p-FAQ p-4">If you want to return a ticket, please fill out the contact form. 
+                Your application will be forwarded for processing in accordance with the ticket tariff conditions.
+            </p><br>
+
+            <a class="a-FAQ a-5" onclick="p_appear('p-5')">How can I check in for a flight?</a><br>
+            <p class="p-FAQ p-5">The easiest way to check in is online check-in. Please note that due to various restrictions, some airports do not offer online check-in. 
+                In these cases, you must check in at the airport - it is free with our airlines.
+            </p><br>
+
+            <a class="a-FAQ a-6" onclick="p_appear('p-6')">Are there limits for transporting animals?</a><br>
+            <p class="p-FAQ p-6">Yes, depending on the type of aircraft operating a given flight, there is a limited number of places for pets, so before buying a ticket,
+                check whether there are still free places on a given flight.
+            </p><br>
+
+            <a class="a-FAQ a-7" onclick="p_appear('p-7')">Where can I check if I am entitled to an in-flight meal?</a><br>
+            <p class="p-FAQ p-7">In our lines, we guarantee meals to every passenger during every journey</p><br>
+
+        </div>
+        <div class="formular">
+            <h2 class="h2-FAQ">Your Question</h2>
+            <form action="">
+                <textarea name="op4" class="formular-nick">Nickname</textarea><br>
+                <textarea name="op4" class="formular-question"></textarea><br>
+
+                <input type="submit" value="Send" class="formular-send">
+            </form>
+        </div>
+        <div class="clearer"></div>
+    </section>
+</body>
+</html>

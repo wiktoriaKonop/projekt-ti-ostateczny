@@ -1,0 +1,132 @@
+@media only screen and (max-width: 1150px)
+{
+    .div-stuff
+    {
+        height: 700px;
+    }
+
+    .img-stuff1
+    {
+        height: 250px;
+        margin-top: 30px;
+    }
+
+    .p-stuff1
+    {
+        margin-left: 330px;
+        margin-top: 60px;
+    }
+
+    .p-stuff2
+    {
+        width: 40%;
+    }
+
+    .img-stuff2
+    {
+        height: 200px;
+        margin-top: 50px;
+    }
+
+    .formular-question
+    {
+        width: 320px;
+    }
+
+    .formular-send
+    {
+        margin-left: 190px;
+    }
+}
+
+@media only screen and (max-width: 700px)
+{
+    body
+    {
+        width: 100%;
+    }
+
+    .h2-header
+    {
+        font-size: 30px;
+        padding-right: 20px;
+    }
+
+    .a-header-logo
+    {
+        padding-left: 20px;
+    }
+
+    .section-opinion
+    {
+        padding-top: 0px;
+    }
+
+    .h2-opinion
+    {
+        height: 100px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .div-opinion
+    {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .h3-opinion
+    {
+        margin-left: 20px;
+    }
+
+    .p-opinion
+    {
+        font-size: 15px;
+    }
+
+    .img-stuff1
+    {
+        clear: left;
+        height: 200px;
+        text-align: center;
+    }
+
+    .p-stuff1
+    {
+        clear: left;
+        width: 90%;
+        margin-left: 5%;
+        padding-top: 15px;
+        font-size: 15px;
+    }
+
+    .div-stuff
+    {
+        height: 1000px;
+    }
+
+    .p-stuff2
+    {
+        clear: left;
+        width: 90%;
+        margin-left: 5%;
+        padding-top: 15px;
+        font-size: 15px;
+        margin-top: 40px;
+    }
+
+    .img-stuff2
+    {
+        clear: left;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .div-FAQ
+    {
+        width: 100%;
+        clear: left;
+        margin-left: 10px;
+    }
+}
